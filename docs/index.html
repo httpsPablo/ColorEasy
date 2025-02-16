@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span class="color-dot"></span>
+            <h1>Color Palette Explorer</h1>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search palettes...">
+        </div>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-btn active" data-category="trending">Trending</button>
+            <button class="tab-btn" data-category="nature">Nature</button>
+            <button class="tab-btn" data-category="gradient">Gradients</button>
+            <button class="tab-btn" data-category="monochrome">Monochrome</button>
+        </div>
+
+        <div class="color-picker-section">
+            <div class="color-picker-container">
+                <h2>Color Picker</h2>
+                <div class="color-picker-wrapper">
+                    <input type="color" id="colorPicker" value="#5F4B8B">
+                    <div class="color-info">
+                        <div class="color-preview" id="colorPreview"></div>
+                        <div class="color-values">
+                            <span id="hexValue">#5F4B8B</span>
+                            <span id="rgbValue">RGB(95, 75, 139)</span>
+                            <span id="hslValue">HSL(260, 30%, 42%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="palettes-grid" id="palettesGrid"></div>
+    </main>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script src="colorPalettes.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
